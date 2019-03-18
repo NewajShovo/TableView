@@ -8,6 +8,8 @@
     NSDate *_dateCreated;
 }
 
+
+
 + (instancetype)randomItem;
 
 // Designated initializer for BNRItem

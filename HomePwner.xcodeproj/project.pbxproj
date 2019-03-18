@@ -18,6 +18,7 @@
 		A0880A0E223F951400902B22 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0880A0D223F951400902B22 /* BNRItemsViewController.m */; };
 		A0880A14223F97BB00902B22 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0880A13223F97BB00902B22 /* BNRItem.m */; };
 		A0880A17223F996300902B22 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A0880A16223F996300902B22 /* BNRItemStore.m */; };
+		A0880A1D223FC1A700902B22 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0880A1C223FC1A700902B22 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		A0880A13223F97BB00902B22 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		A0880A15223F996300902B22 /* BNRItemStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		A0880A16223F996300902B22 /* BNRItemStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		A0880A1C223FC1A700902B22 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				A0880A13223F97BB00902B22 /* BNRItem.m */,
 				A0880A0C223F951400902B22 /* BNRItemsViewController.h */,
 				A0880A0D223F951400902B22 /* BNRItemsViewController.m */,
+				A0880A1C223FC1A700902B22 /* HeaderView.xib */,
 				A0880A15223F996300902B22 /* BNRItemStore.h */,
 				A0880A16223F996300902B22 /* BNRItemStore.m */,
 			);
@@ -253,6 +256,7 @@
 				A08809E7223F944F00902B22 /* LaunchScreen.storyboard in Resources */,
 				A08809E4223F944F00902B22 /* Assets.xcassets in Resources */,
 				A08809E2223F944D00902B22 /* Main.storyboard in Resources */,
+				A0880A1D223FC1A700902B22 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
