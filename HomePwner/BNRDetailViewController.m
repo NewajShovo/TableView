@@ -8,9 +8,10 @@
 
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
+#import "BNRImageStore.h"
 
 @interface BNRDetailViewController ()
-<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *NameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -27,6 +28,7 @@
     [ super viewWillAppear:animated];
     BNRItem *item = self.item;
     
+    
     self.NameField.text = item.itemName;
     self.serialNumberField.text = item.serialNumber;
     self.valueField.text = [ NSString stringWithFormat:@"%d", item.valueInDollars];
@@ -39,6 +41,11 @@
         dateFormatter.dateStyle = NSDateFormatterMediumStyle;
         dateFormatter.timeStyle = NSDateFormatterNoStyle;
         self.dateLabel.text = [ dateFormatter stringFromDate:item.dateCreated];
+    NSString *imageKey = item.itemKey;
+    
+    UIImage *imageToDisplay = [ [ BNRImageStore sharedStore] imageForKey:imageKey];
+    
+    self.imageView.image = imageToDisplay;
   
     
     
@@ -83,9 +90,24 @@
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info
 {
     UIImage *image = info [ UIImagePickerControllerOriginalImage ];
+    
+    [ [ BNRImageStore sharedStore] setImage:image forKey:self.item.itemKey];
+    
+    
+    
     self.imageView.image = image;
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (IBAction)backgroundTapped:(id)sender {
+
+    [ self. view endEditing:YES];
+}
+
 
 @end

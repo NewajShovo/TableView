@@ -1,5 +1,6 @@
 #import "BNRItem.h"
 
+
 @implementation BNRItem
 
 - (instancetype)initWithName: (NSString *)name
@@ -13,6 +14,10 @@
         _valueInDollars = value;
         _serialNumber = sNumber;
         _dateCreated = [[NSDate alloc] init];
+        NSUUID *uuid = [ [ NSUUID alloc] init];
+        NSString *key = [ uuid UUIDString];
+        _itemKey= key;
+        NSLog(@"%@",_itemKey);
     }
     
     return self;
