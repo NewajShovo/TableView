@@ -7,6 +7,7 @@
 //
 
 #import "BNRItemsViewController.h"
+#import "BNRDetailViewController.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 #import <UIKit/UIKit.h>
@@ -23,7 +24,7 @@
 - (void) viewDidLoad
 
 {
-    [ super viewDidLoad];
+   [ super viewDidLoad];
     [self.tableView registerClass:[ UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     UIView *header = self.headerView;
     [self.tableView setTableHeaderView:header];
@@ -34,17 +35,19 @@
     
     if (self)
     {
-       // for ( int i = 0; i < 5; i++)
-        {
-           // [ [ BNRItemStore sharedStore] createItem];
-        }
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwner";
+        
+        UIBarButtonItem *bbi = [ [ UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector (addNewItem:)];
+        navItem.rightBarButtonItem = bbi;
+        navItem.leftBarButtonItem = self.editButtonItem;
     }
     
     return self;
 
 }
 
-- (UIView *) headerView
+/*- (UIView *) headerView
 {
     if (!_headerView)
     {
@@ -52,6 +55,7 @@
     }
     return _headerView;
 }
+ */
 
 - (IBAction) addNewItem:(id)sender
 {
@@ -109,6 +113,23 @@
 - (void) tableView:(UITableView *)tableView moveRowAtIndexPath:(nonnull NSIndexPath *)sourceIndexPath toIndexPath:(nonnull NSIndexPath *)destinationIndexPath
 {
     [ [ BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BNRDetailViewController *detailViewController = [ [ BNRDetailViewController alloc] init];
+    
+    NSArray *items = [ [ BNRItemStore sharedStore] allItems];
+    BNRItem *selectedItem = items [ indexPath.row];
+    
+    detailViewController.item = selectedItem;
+    [ self.navigationController pushViewController:detailViewController animated:YES];
+    
+}
+-(void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 

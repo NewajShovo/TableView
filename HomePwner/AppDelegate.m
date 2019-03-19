@@ -21,7 +21,9 @@
     self.window = [ [ UIWindow alloc] initWithFrame:[ [ UIScreen mainScreen] bounds]];
     
     BNRItemsViewController *itemViewController = [ [ BNRItemsViewController alloc] init];
-    self.window.rootViewController = itemViewController;
+    
+    UINavigationController *navController = [ [ UINavigationController alloc] initWithRootViewController:itemViewController];
+    self.window.rootViewController = navController;
     self.window.backgroundColor = [ UIColor whiteColor];
     [ self.window makeKeyAndVisible];
     
