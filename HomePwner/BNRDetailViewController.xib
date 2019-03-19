@@ -14,13 +14,15 @@
             <connections>
                 <outlet property="NameField" destination="1zw-ta-n3T" id="9IM-56-tgj"/>
                 <outlet property="dateLabel" destination="RrT-Yu-KbE" id="LgZ-pz-NlV"/>
+                <outlet property="imageView" destination="kH8-h5-7tT" id="AUA-d9-0JB"/>
                 <outlet property="serialNumberField" destination="QUr-qY-7JE" id="4ne-MD-9ls"/>
+                <outlet property="toolbar" destination="Jdu-2Y-pYH" id="VXC-rL-kJR"/>
                 <outlet property="valueField" destination="Lb7-Ey-9f1" id="nsz-7E-2xZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -82,6 +84,21 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-2Y-pYH">
+                    <rect key="frame" x="1" y="623" width="374" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem systemItem="camera" id="RQo-Ig-e6N">
+                            <connections>
+                                <action selector="takePicture:" destination="-1" id="Dn2-XN-ViL"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kH8-h5-7tT">
+                    <rect key="frame" x="33" y="346" width="308" height="277"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

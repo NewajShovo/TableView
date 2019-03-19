@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A010FBC52240E5030069D1B7 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A010FBC42240E5030069D1B7 /* BNRImageStore.m */; };
 		A08809DC223F944D00902B22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A08809DB223F944D00902B22 /* AppDelegate.m */; };
 		A08809DF223F944D00902B22 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08809DE223F944D00902B22 /* ViewController.m */; };
 		A08809E2223F944D00902B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08809E0223F944D00902B22 /* Main.storyboard */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A010FBC32240E5030069D1B7 /* BNRImageStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		A010FBC42240E5030069D1B7 /* BNRImageStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 		A08809D7223F944D00902B22 /* HomePwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08809DA223F944D00902B22 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A08809DB223F944D00902B22 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				A08809E3223F944F00902B22 /* Assets.xcassets */,
 				A08809E5223F944F00902B22 /* LaunchScreen.storyboard */,
 				A08809E8223F944F00902B22 /* Info.plist */,
+				A010FBC32240E5030069D1B7 /* BNRImageStore.h */,
+				A010FBC42240E5030069D1B7 /* BNRImageStore.m */,
 				A08809E9223F944F00902B22 /* main.m */,
 				A0880A12223F97B300902B22 /* BNRItem.h */,
 				A0880A13223F97BB00902B22 /* BNRItem.m */,
@@ -294,6 +299,7 @@
 				A08809EA223F944F00902B22 /* main.m in Sources */,
 				A0880A14223F97BB00902B22 /* BNRItem.m in Sources */,
 				A0A6C50E2240B8FB000FFA65 /* BNRDetailViewController.m in Sources */,
+				A010FBC52240E5030069D1B7 /* BNRImageStore.m in Sources */,
 				A0880A0E223F951400902B22 /* BNRItemsViewController.m in Sources */,
 				A08809DC223F944D00902B22 /* AppDelegate.m in Sources */,
 				A0880A17223F996300902B22 /* BNRItemStore.m in Sources */,
